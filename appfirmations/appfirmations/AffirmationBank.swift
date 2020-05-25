@@ -12,6 +12,8 @@ import UIKit
 class AffirmationBank: NSObject {
     // Mark Properties - static properties shared across all quotes
     var list: [Affirmation]
+    let path = Bundle.main.path(forResource: "quotes", ofType: "txt")
+    
     
     // Mark Initialization
     init?(isEmpty: Bool) {
@@ -22,11 +24,34 @@ class AffirmationBank: NSObject {
         //        }
         
         // Initialize stored properties. -- need to add a functionality to pull data from a file and create Affirmations accordingly, appending each to list
-        var first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
+        
+        let first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
         self.list = [first]
-        first = Affirmation(text: "Am I good enough? Yes I am.", author: "Michelle Obama", fav: true)
-        self.list.append(first)
-    }
+        
+        let url = URL(fileURLWithPath: path ?? "")
+        do {
+            let data = try Data(contentsOf: url)
+            print("Got data", data)
+            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any]
+            // let json = try JSONSerialization.jsonObject(with: data, options: [])
+            print("Got json")
+            let arr = json ?? []
+            print(" made array")
+            for entry in arr{
+                guard let entryDic = entry as? [String: Any] else {return}
+                print("entryDic made")
+                guard let text = entryDic["text"] as? String else {return}
+                print("text made")
+                guard let author = entryDic["author"] as? String else {return}
+                let temp = Affirmation(text: text, author: author, fav: true)
+                self.list.append(temp)
+            }
+        }
+        catch{
+            print("error getting data")
+        }
+        
+    }// end of init
     
     // returns a random affirmation from the affirmation bank list
     func getRandomElement() -> Affirmation {
