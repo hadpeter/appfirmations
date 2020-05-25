@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let allAffirmations = AffirmationBank(isEmpty: false)
 
     @IBOutlet weak var quote: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let affirmation = Affirmation(text: "affirmation goes here", fav: true)
+        let affirmation = allAffirmations?.list[0]
         quote.text = affirmation?.text
     }
 

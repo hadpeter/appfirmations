@@ -15,7 +15,7 @@ class Affirmation: NSObject {
     var fav: Bool
     
     // Mark Initialization
-    init?(text: String, fav: Bool) {
+    init(text: String, fav: Bool) {
         // Check for nil cases
         // Check text is not be empty
 //        guard !text.isEmpty else {

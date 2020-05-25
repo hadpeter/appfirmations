@@ -14,6 +14,7 @@
 		391490FA247AF0F9005A5272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391490F8247AF0F9005A5272 /* LaunchScreen.storyboard */; };
 		39149105247AF0F9005A5272 /* appfirmationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149104247AF0F9005A5272 /* appfirmationsTests.swift */; };
 		39149110247B5F8C005A5272 /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914910F247B5F8C005A5272 /* Affirmation.swift */; };
+		39149112247C4779005A5272 /* AffirmationBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149111247C4779005A5272 /* AffirmationBank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		39149104247AF0F9005A5272 /* appfirmationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appfirmationsTests.swift; sourceTree = "<group>"; };
 		39149106247AF0F9005A5272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3914910F247B5F8C005A5272 /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
+		39149111247C4779005A5272 /* AffirmationBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				391490EF247AF0F7005A5272 /* AppDelegate.swift */,
+				39149111247C4779005A5272 /* AffirmationBank.swift */,
 				3914910F247B5F8C005A5272 /* Affirmation.swift */,
 				391490F1247AF0F8005A5272 /* ViewController.swift */,
 				391490F3247AF0F8005A5272 /* Main.storyboard */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39149112247C4779005A5272 /* AffirmationBank.swift in Sources */,
 				391490F2247AF0F8005A5272 /* ViewController.swift in Sources */,
 				391490F0247AF0F7005A5272 /* AppDelegate.swift in Sources */,
 				39149110247B5F8C005A5272 /* Affirmation.swift in Sources */,
