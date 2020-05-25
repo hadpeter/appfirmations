@@ -13,6 +13,7 @@
 		391490F7247AF0F9005A5272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391490F6247AF0F9005A5272 /* Assets.xcassets */; };
 		391490FA247AF0F9005A5272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391490F8247AF0F9005A5272 /* LaunchScreen.storyboard */; };
 		39149105247AF0F9005A5272 /* appfirmationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149104247AF0F9005A5272 /* appfirmationsTests.swift */; };
+		39149110247B5F8C005A5272 /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914910F247B5F8C005A5272 /* Affirmation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		39149100247AF0F9005A5272 /* appfirmationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appfirmationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39149104247AF0F9005A5272 /* appfirmationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appfirmationsTests.swift; sourceTree = "<group>"; };
 		39149106247AF0F9005A5272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3914910F247B5F8C005A5272 /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				391490EF247AF0F7005A5272 /* AppDelegate.swift */,
+				3914910F247B5F8C005A5272 /* Affirmation.swift */,
 				391490F1247AF0F8005A5272 /* ViewController.swift */,
 				391490F3247AF0F8005A5272 /* Main.storyboard */,
 				391490F6247AF0F9005A5272 /* Assets.xcassets */,
@@ -199,6 +202,7 @@
 			files = (
 				391490F2247AF0F8005A5272 /* ViewController.swift in Sources */,
 				391490F0247AF0F7005A5272 /* AppDelegate.swift in Sources */,
+				39149110247B5F8C005A5272 /* Affirmation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
