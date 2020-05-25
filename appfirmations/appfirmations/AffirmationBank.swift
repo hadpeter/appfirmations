@@ -27,11 +27,10 @@ class AffirmationBank: NSObject {
         self.list = []
         do {
             let content = try String(contentsOfFile: path ?? "")
-            print("content ", content)
             
             let arr = content.split(separator: "\n")
             for line in arr{
-                let entry = line.split(separator: " ")
+                let entry = line.split(separator: ";")
                 let text = entry[0]
                 let author = entry[1]
                 let temp = Affirmation(text: String(text), author: String(author), fav: true)
