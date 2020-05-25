@@ -22,12 +22,12 @@ class AffirmationBank: NSObject {
         //        }
         
         // Initialize stored properties.
-        let first = Affirmation(text: "hehe hoho", fav: true)
-        if isEmpty {
-            self.list = []
-        }
-        else {
-            self.list = [first]
-        }
+        let first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
+        self.list = [first]
+    }
+    
+    // returns a random affirmation from the affirmation bank list
+    func getRandomElement() -> Affirmation {
+        return self.list[0]
     }
 }

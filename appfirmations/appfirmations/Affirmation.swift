@@ -12,10 +12,11 @@ import UIKit
 class Affirmation: NSObject {
     // Mark Properties - static properties shared across all quotes
     var text: String
+    var author: String
     var fav: Bool
     
     // Mark Initialization
-    init(text: String, fav: Bool) {
+    init(text: String, author: String, fav: Bool) {
         // Check for nil cases
         // Check text is not be empty
 //        guard !text.isEmpty else {
@@ -24,6 +25,7 @@ class Affirmation: NSObject {
         
         // Initialize stored properties.
         self.text = text
+        self.author = author
         self.fav = fav
     }
 }

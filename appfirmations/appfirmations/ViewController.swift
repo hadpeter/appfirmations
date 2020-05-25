@@ -16,8 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let affirmation = allAffirmations?.list[0]
+        let affirmation = allAffirmations?.getRandomElement()
+        let signature = affirmation?.author ?? "unkown"
         quote.text = affirmation?.text
+        quote.text = quote.text + "\n" + "- " + signature
+        quote.isEditable = false
+        quote.textAlignment = NSTextAlignment.center
+        quote.font = UIFont.init(name: "AmericanTypewriter", size: 18)
     }
 
 
