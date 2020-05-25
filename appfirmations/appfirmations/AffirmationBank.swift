@@ -21,13 +21,16 @@ class AffirmationBank: NSObject {
         //            return nil
         //        }
         
-        // Initialize stored properties.
-        let first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
+        // Initialize stored properties. -- need to add a functionality to pull data from a file and create Affirmations accordingly, appending each to list
+        var first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
         self.list = [first]
+        first = Affirmation(text: "Am I good enough? Yes I am.", author: "Michelle Obama", fav: true)
+        self.list.append(first)
     }
     
     // returns a random affirmation from the affirmation bank list
     func getRandomElement() -> Affirmation {
-        return self.list[0]
+        let index = Int.random(in: 0 ..< list.count)
+        return self.list[index]
     }
 }
