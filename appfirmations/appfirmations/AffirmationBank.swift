@@ -27,29 +27,45 @@ class AffirmationBank: NSObject {
         
         let first = Affirmation(text: "hehe hoho", author: "Hadley", fav: true)
         self.list = [first]
-        
-        let url = URL(fileURLWithPath: path ?? "")
         do {
-            let data = try Data(contentsOf: url)
-            print("Got data", data)
-            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any]
-            // let json = try JSONSerialization.jsonObject(with: data, options: [])
-            print("Got json")
-            let arr = json ?? []
-            print(" made array")
-            for entry in arr{
-                guard let entryDic = entry as? [String: Any] else {return}
-                print("entryDic made")
-                guard let text = entryDic["text"] as? String else {return}
-                print("text made")
-                guard let author = entryDic["author"] as? String else {return}
-                let temp = Affirmation(text: text, author: author, fav: true)
-                self.list.append(temp)
+            let content = try String(contentsOfFile: path ?? "")
+            print("content ", content)
+            
+            let arr = content.split(separator: "\n")
+            for line in arr{
+                let entry = line.split(separator: " ")
+                let author = entry[0]
             }
         }
         catch{
-            print("error getting data")
+            print("error ")
         }
+        
+        // let content = String(contentsOfFile: path!, encoding: String.Encoding.utf8, error: nil)!
+        
+//        let url = URL(fileURLWithPath: path ?? "")
+//        do {
+//            let data = try Data(contentsOf: url)
+//            print("Got data", data)
+//            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+//            // let json = try JSONSerialization.jsonObject(with: data, options: [])
+//            print("Got json", json)
+//            guard let arr = json as? [String: Any] else {return}
+//            print(" made array")
+//            for entry in arr{
+//                print("entry in arr", entry)
+//                guard let entryDic = entry as? [String: Any] else {return}
+//                print("entryDic made")
+//                guard let text = entryDic["text"] as? String else {return}
+//                print("text made")
+//                guard let author = entryDic["author"] as? String else {return}
+//                let temp = Affirmation(text: text, author: author, fav: true)
+//                self.list.append(temp)
+//            }
+//        }
+//        catch{
+//            print("error getting data")
+//        }
         
     }// end of init
     
