@@ -32,8 +32,11 @@ class AffirmationBank: NSObject {
             for line in arr{
                 let entry = line.split(separator: ";")
                 let text = entry[0]
-                let author = entry[1]
-                let temp = Affirmation(text: String(text), author: String(author), fav: true)
+                var author = "unknown"
+                if entry.count > 1{
+                    author = String(entry[1])
+                }
+                let temp = Affirmation(text: String(text), author: author, fav: true)
                 self.list.append(temp)
             }
         }
