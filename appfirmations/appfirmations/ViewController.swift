@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     let allAffirmations = AffirmationBank(isEmpty: false)
 
     @IBOutlet weak var quote: UITextView!
+    @IBAction func favButton(_ sender: UIButton) {
+        // change affirmation fav status to true
+        // add fav to user's list of favs
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,7 +26,7 @@ class ViewController: UIViewController {
         quote.text = quote.text + "\n" + "- " + signature
         quote.isEditable = false
         quote.textAlignment = NSTextAlignment.center
-        quote.font = UIFont.init(name: "AmericanTypewriter", size: 18)
+        quote.font = UIFont.init(name: affirmation?.font ?? "Helvetica", size: 18)
     }
 
 

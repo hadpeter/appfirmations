@@ -14,9 +14,10 @@ class Affirmation: NSObject {
     var text: String
     var author: String
     var fav: Bool
+    var font: String
     
     // Mark Initialization
-    init(text: String, author: String, fav: Bool) {
+    init(text: String, author: String, fav: Bool, font: String) {
         // Check for nil cases
         // Check text is not be empty
 //        guard !text.isEmpty else {
@@ -27,5 +28,6 @@ class Affirmation: NSObject {
         self.text = text
         self.author = author
         self.fav = fav
+        self.font = font
     }
 }
