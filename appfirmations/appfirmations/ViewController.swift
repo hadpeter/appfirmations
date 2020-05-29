@@ -10,17 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let allAffirmations = AffirmationBank(isEmpty: false)
+    let user = UsersAPI.sharedInstance.getUser(byName: "John")
 
     @IBOutlet weak var quote: UITextView!
     @IBAction func favButton(_ sender: UIButton) {
         // change affirmation fav status to true
-        // add fav to user's list of favs
+        user?.updateFav()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let affirmation = allAffirmations?.getRandomElement()
+        let affirmation = user?.getRandomElement()
         let signature = affirmation?.author ?? "unkown"
         quote.text = affirmation?.text
         quote.text = quote.text + "\n" + "- " + signature

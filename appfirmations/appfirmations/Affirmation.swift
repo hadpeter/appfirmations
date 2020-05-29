@@ -6,7 +6,6 @@
 //  Copyright © 2020 Hadley Peterson. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Affirmation: NSObject {

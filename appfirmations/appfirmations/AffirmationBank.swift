@@ -16,7 +16,7 @@ class AffirmationBank: NSObject {
     
     
     // Mark Initialization
-    init?(isEmpty: Bool) {
+    override init() {
         // Check for nil cases
         // Check text is not be empty
         //        guard !text.isEmpty else {
@@ -36,7 +36,7 @@ class AffirmationBank: NSObject {
                 if entry.count > 1{
                     author = String(entry[1])
                 }
-                let temp = Affirmation(text: String(text), author: author, fav: true, font: "AmericanTypewriter")
+                let temp = Affirmation(text: String(text), author: author, fav: false, font: "AmericanTypewriter")
                 self.list.append(temp)
             }
         }
