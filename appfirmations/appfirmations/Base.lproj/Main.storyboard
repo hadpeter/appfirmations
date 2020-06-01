@@ -38,7 +38,11 @@
                                 <items>
                                     <navigationItem id="kaA-wa-hDJ">
                                         <barButtonItem key="backBarButtonItem" title="Favorite Quotes" id="7eP-VB-al4"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Favorite Quotes" id="Q5F-F7-omV"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Favorite Quotes" id="Q5F-F7-omV">
+                                            <connections>
+                                                <segue destination="0Wh-SX-MKx" kind="show" id="b0h-g0-ukX"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -46,9 +50,6 @@
                                 <rect key="frame" x="180" y="433" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Favorite"/>
-                                <connections>
-                                    <action selector="favButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCY-oZ-YFd"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69167894649999995" green="1" blue="0.95506341370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,33 +64,43 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="63Z-GB-UoM">
+        <!--Title-->
+        <scene sceneID="iFZ-Q8-IZH">
             <objects>
-                <tableViewController id="ePk-Ju-CeQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IUW-yR-911">
+                <tableViewController id="0Wh-SX-MKx" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tL4-7v-ClB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uaA-Db-3bW">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AffirmationTableViewCell" rowHeight="90" id="Ykb-fi-TBq" customClass="AffirmationTableViewCell" customModule="appfirmations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaA-Db-3bW" id="RVd-R0-t9r">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ykb-fi-TBq" id="taS-Le-Kh8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Affirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yPU-gT-N1a">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="ePk-Ju-CeQ" id="lTs-kF-1iM"/>
-                            <outlet property="delegate" destination="ePk-Ju-CeQ" id="VYp-uL-Jfj"/>
+                            <outlet property="dataSource" destination="0Wh-SX-MKx" id="osb-Ja-VpV"/>
+                            <outlet property="delegate" destination="0Wh-SX-MKx" id="JlJ-Ar-NJc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="V7d-eD-R3A"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eha-WV-byN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upD-t4-JdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="94"/>
+            <point key="canvasLocation" x="824.63768115942037" y="75.669642857142847"/>
         </scene>
     </scenes>
 </document>
