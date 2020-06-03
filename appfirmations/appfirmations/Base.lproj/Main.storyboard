@@ -89,6 +89,9 @@
                                         </textView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="affirmationBlurb" destination="taS-Le-Kh8" id="fCq-D0-THb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

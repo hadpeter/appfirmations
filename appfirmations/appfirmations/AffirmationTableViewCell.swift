@@ -9,7 +9,10 @@
 import UIKit
 
 class AffirmationTableViewCell: UITableViewCell {
-
+    
+    // Properties
+    @IBOutlet weak var affirmationBlurb: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

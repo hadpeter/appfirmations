@@ -19,6 +19,7 @@
 		39149116247F0E88005A5272 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149115247F0E88005A5272 /* UserAPI.swift */; };
 		39149118247F0EAD005A5272 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149117247F0EAD005A5272 /* User.swift */; };
 		3914911A248497F2005A5272 /* AffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39149119248497F2005A5272 /* AffirmationTableViewCell.swift */; };
+		3914911D24874677005A5272 /* AffirmationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914911B24874677005A5272 /* AffirmationsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		39149115247F0E88005A5272 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		39149117247F0EAD005A5272 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39149119248497F2005A5272 /* AffirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationTableViewCell.swift; sourceTree = "<group>"; };
+		3914911B24874677005A5272 /* AffirmationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +94,11 @@
 				39149113247C59E4005A5272 /* quotes.txt */,
 				391490EF247AF0F7005A5272 /* AppDelegate.swift */,
 				39149111247C4779005A5272 /* AffirmationBank.swift */,
-				39149115247F0E88005A5272 /* UserAPI.swift */,
 				39149117247F0EAD005A5272 /* User.swift */,
-				3914910F247B5F8C005A5272 /* Affirmation.swift */,
+				39149115247F0E88005A5272 /* UserAPI.swift */,
 				39149119248497F2005A5272 /* AffirmationTableViewCell.swift */,
+				3914911B24874677005A5272 /* AffirmationsTableViewController.swift */,
+				3914910F247B5F8C005A5272 /* Affirmation.swift */,
 				391490F1247AF0F8005A5272 /* ViewController.swift */,
 				391490F3247AF0F8005A5272 /* Main.storyboard */,
 				391490F6247AF0F9005A5272 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 			files = (
 				39149112247C4779005A5272 /* AffirmationBank.swift in Sources */,
 				391490F2247AF0F8005A5272 /* ViewController.swift in Sources */,
+				3914911D24874677005A5272 /* AffirmationsTableViewController.swift in Sources */,
 				39149118247F0EAD005A5272 /* User.swift in Sources */,
 				3914911A248497F2005A5272 /* AffirmationTableViewCell.swift in Sources */,
 				391490F0247AF0F7005A5272 /* AppDelegate.swift in Sources */,
