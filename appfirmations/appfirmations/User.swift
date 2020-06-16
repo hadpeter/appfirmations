@@ -26,6 +26,7 @@ class User {
     }
     
     func updateFav() {
+        print("FAV called")
         if currentAffirmation.fav == true{
             // want to unfav
             currentAffirmation.fav = false

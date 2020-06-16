@@ -16,6 +16,7 @@ class AffirmationsTableViewController: UITableViewController {
     var favList = [Affirmation]()
         
     override func viewDidLoad() {
+        print("New view controller")
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -27,8 +28,11 @@ class AffirmationsTableViewController: UITableViewController {
         // TODO: LOAD DATA
         if let savedAffirmations = loadAffirmations() {
             favList += savedAffirmations
+            print("saved affirmations processed")
         }
         else {
+            print("no favorites")
+            print(favList)
             // display no favorites yet
         }
     }
@@ -50,9 +54,10 @@ class AffirmationsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AffirmationTableViewCell  else {
             fatalError("The dequeued cell is not an instance of AffirmationTableViewCell.")
         }
+        
         let affirmation = favList[indexPath.row]
         
-        cell.affirmationBlurb.text = affirmation?.text
+        cell.affirmationBlurb.text = affirmation.text
 
         // Configure the cell...
 

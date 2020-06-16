@@ -38,9 +38,9 @@
                                 <items>
                                     <navigationItem id="kaA-wa-hDJ">
                                         <barButtonItem key="backBarButtonItem" title="Favorite Quotes" id="7eP-VB-al4"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Favorite Quotes" id="Q5F-F7-omV">
+                                        <barButtonItem key="rightBarButtonItem" title="Favorite Quotes" id="FN7-K6-R9b">
                                             <connections>
-                                                <segue destination="0Wh-SX-MKx" kind="show" id="b0h-g0-ukX"/>
+                                                <segue destination="0Wh-SX-MKx" kind="show" id="RJP-rF-Xs8"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -50,6 +50,9 @@
                                 <rect key="frame" x="180" y="433" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="favButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="res-R3-CLD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69167894649999995" green="1" blue="0.95506341370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,17 +79,30 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AffirmationTableViewCell" rowHeight="90" id="Ykb-fi-TBq" customClass="AffirmationTableViewCell" customModule="appfirmations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ykb-fi-TBq" id="taS-Le-Kh8">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ykb-fi-TBq" id="taS-Le-Kh8" userLabel="Content">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Affirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yPU-gT-N1a">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udy-pq-Oby" userLabel="affirmationBlurb">
+                                            <rect key="frame" x="20" y="44" width="374" height="46"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gw1-rQ-tWg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <items>
+                                                <navigationItem title="Favorite Affirmations" id="Ncc-KI-H9M">
+                                                    <barButtonItem key="rightBarButtonItem" title="Back" id="BjO-6l-wPE">
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="urd-Ts-MB1"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </navigationItem>
+                                            </items>
+                                        </navigationBar>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>

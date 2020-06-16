@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     let user = UsersAPI.sharedInstance.getUser(byName: "John")
-
     @IBOutlet weak var quote: UITextView!
     @IBAction func favButton(_ sender: UIButton) {
         // change affirmation fav status to true
