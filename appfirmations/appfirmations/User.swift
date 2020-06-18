@@ -27,13 +27,13 @@ class User {
     
     func updateFav() {
         print("FAV called")
-        if currentAffirmation.fav == true{
+        if currentAffirmation.fav == 1{
             // want to unfav
-            currentAffirmation.fav = false
+            currentAffirmation.fav = 0
             print("Need to implement deleting fav")
         }
         else {
-            currentAffirmation.fav = true
+            currentAffirmation.fav = 1
             favList.append(currentAffirmation)
             // need to savefav list
             let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favList, toFile: Affirmation.ArchiveURL.path)

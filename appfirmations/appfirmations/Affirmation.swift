@@ -23,11 +23,11 @@ class Affirmation: NSObject, NSCoding {
     
     var text: String
     var author: String
-    var fav: Bool
+    var fav: Int
     var font: String
     
     // Mark Initialization
-    init(text: String, author: String, fav: Bool, font: String) {
+    init(text: String, author: String, fav: Int, font: String) {
         // Check for nil cases
         // Check text is not be empty
 //        guard !text.isEmpty else {
@@ -64,7 +64,7 @@ class Affirmation: NSObject, NSCoding {
         }
         
         // decodeIntegerForKey unarchives an integer
-        guard let fav = aDecoder.decodeInteger(forKey: PropertyKey.fav) as? Bool else {
+        guard let fav = aDecoder.decodeInteger(forKey: PropertyKey.fav) as? Int else {
             print("Unable to decode the fav for an Affirmation object.")
             return nil
         }

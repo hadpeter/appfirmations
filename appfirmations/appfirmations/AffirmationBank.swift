@@ -36,7 +36,7 @@ class AffirmationBank: NSObject {
                 if entry.count > 1{
                     author = String(entry[1])
                 }
-                let temp = Affirmation(text: String(text), author: author, fav: false, font: "AmericanTypewriter")
+                let temp = Affirmation(text: String(text), author: author, fav: 0, font: "AmericanTypewriter")
                 self.list.append(temp)
             }
         }

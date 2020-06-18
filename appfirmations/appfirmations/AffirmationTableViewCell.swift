@@ -10,7 +10,6 @@ import UIKit
 
 class AffirmationTableViewCell: UITableViewCell {
     
-    // Properties
     @IBOutlet weak var affirmationBlurb: UILabel!
     
     override func awakeFromNib() {
