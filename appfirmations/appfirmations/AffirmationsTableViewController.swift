@@ -50,11 +50,12 @@ class AffirmationsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("Loading Table")
         let cellIdentifier = "AffirmationTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AffirmationTableViewCell  else {
             fatalError("The dequeued cell is not an instance of AffirmationTableViewCell.")
         }
-        
+        print("got cell")
         let affirmation = favList[indexPath.row]
         
         cell.affirmationBlurb.text = affirmation.text
@@ -110,8 +111,8 @@ class AffirmationsTableViewController: UITableViewController {
     }
     */
     
-    private func saveMeals() {
-        // attempt to save meal list
+    private func saveAffirmations() {
+        // attempt to save fav list
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favList, toFile: Affirmation.ArchiveURL.path)
         // log success of saving to console
         if isSuccessfulSave {
@@ -121,7 +122,7 @@ class AffirmationsTableViewController: UITableViewController {
         }
     }
     
-    // returns type optional array of Meal objects
+    // returns type optional array of Affirmation objects
     private func loadAffirmations() -> [Affirmation]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Affirmation.ArchiveURL.path) as? [Affirmation]
     }

@@ -11,7 +11,6 @@ import UIKit
 class AffirmationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var affirmationBlurb: UILabel!
-    
     override func awakeFromNib() {
         print("Cell")
         super.awakeFromNib()
