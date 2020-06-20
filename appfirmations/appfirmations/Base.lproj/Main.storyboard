@@ -94,7 +94,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="affirmationBlurb" destination="LLI-p1-MCk" id="vdu-Jp-7xM"/>
-                                    <outlet property="cell" destination="TD7-U0-Cj9" id="7kP-bA-xd8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
