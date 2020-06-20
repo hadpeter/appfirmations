@@ -94,6 +94,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="affirmationBlurb" destination="LLI-p1-MCk" id="vdu-Jp-7xM"/>
+                                    <segue destination="oRe-14-B57" kind="show" id="ryf-3Y-ZvU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -107,6 +108,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFj-vY-XHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bxq-17-LCi">
+            <objects>
+                <navigationController id="oRe-14-B57" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sfE-u8-udI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OKh-Fu-X9v" kind="relationship" relationship="rootViewController" id="1gU-Au-kDG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXT-pi-Vu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="83"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xvf-rB-TMP">
+            <objects>
+                <viewController id="OKh-Fu-X9v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bg-yB-gPO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Fav Affirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-XL-rmn">
+                                <rect key="frame" x="87" y="244" width="240" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69167894649999995" green="1" blue="0.95506341370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Dmn-CZ-fP4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L64-44-Zpf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAi-JB-bHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3376.811594202899" y="78.348214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="riX-YJ-vgK">
