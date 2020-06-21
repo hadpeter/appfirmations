@@ -12,14 +12,12 @@ class AffirmationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var affirmationBlurb: UILabel!
     override func awakeFromNib() {
-        print("Cell")
         super.awakeFromNib()
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        print("Cell call")
 
         // Configure the view for the selected state
     }
