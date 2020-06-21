@@ -8,26 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FavQuoteController: UIViewController {
+    
+    
     let user = UsersAPI.sharedInstance.getUser(byName: "John")
-    @IBOutlet weak var quote: UITextView!
-    @IBAction func favButton(_ sender: UIButton) {
-        // change affirmation fav status to true
-        user?.updateFav()
-    }
+    
     override func viewDidLoad() {
         print("Main view controller")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let affirmation = user?.getRandomElement()
         let signature = affirmation?.author ?? "unkown"
-        quote.text = affirmation?.text
-        quote.text = quote.text + "\n" + "- " + signature
-        quote.isEditable = false
-        quote.textAlignment = NSTextAlignment.center
-        quote.font = UIFont.init(name: affirmation?.font ?? "Helvetica", size: 18)
+//        quote.text = affirmation?.text
+//        quote.text = quote.text + "\n" + "- " + signature
+//        quote.isEditable = false
+//        quote.textAlignment = NSTextAlignment.center
+//        quote.font = UIFont.init(name: affirmation?.font ?? "Helvetica", size: 18)
     }
-
-
+    
+    
 }
+
 

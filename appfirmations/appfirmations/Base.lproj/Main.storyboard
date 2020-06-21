@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Fav Affirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-XL-rmn">
-                                <rect key="frame" x="87" y="244" width="240" height="169"/>
+                                <rect key="frame" x="87" y="227" width="240" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -224,7 +224,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ryf-3Y-ZvU"/>
+        <segue reference="a7h-P4-76i"/>
         <segue reference="NAz-nT-BVJ"/>
         <segue reference="emd-G3-x9N"/>
     </inferredMetricsTieBreakers>
